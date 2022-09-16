@@ -1,0 +1,455 @@
+:root {
+  --dark-color: #19283f;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #d0d7da;
+}
+
+body {
+  font-family: 'Cairo' , sans-serif;
+}
+
+.main-button {
+  background-color: var(--dark-color);
+}
+
+.main-button {
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.main-button:focus {
+  background-color: var(--dark-color);
+}
+
+.main-button:hover {
+  background-color: var(--green-color);
+  color: white;
+  border: 0;
+}
+
+
+@media (max-width: 575.98px) {
+  .benefits {
+    min-height: calc(100vh + 400px);
+  }
+  .goals {
+    min-height: calc(100vh + 650px);
+  }
+  .directive {
+    min-height: calc(100vh + 1000px);
+    width: 100%;
+  }
+  .directive .container .card {
+    width: 100px;
+    /* display: flex; */
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-25% , 25%);
+  }
+}
+
+@media (max-width: 767.98px) {  
+  .directive .container .card {
+    width: 1000px;
+    left: -50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(50% , 25%);
+  }
+}
+
+@media (max-width: 989px) {
+  .lanidng {
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+}
+
+@media (min-width: 990px) {
+  .landing .container {
+    margin-left: auto;
+    height: 85vh;
+  }
+}
+
+
+/* Start Nav  */
+
+.navbar {
+  background-color: var(--dark-color);
+}
+
+.logo {
+  width: 70px;
+  transition: .3s;
+}
+
+.navbar .navbar-toggler {
+  font-size: 20px;
+  border-color: white;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar .navbar-toggler[aria-expanded = 'true'] {
+  border-color: var(--green-color);
+  background-color: white;
+}
+
+.navbar-nav li a {
+  color: rgb(252, 243, 243);
+  font-weight: 600;
+  font-size: 17px;
+  transition: .4s;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: crimson;
+}
+
+/* End Nav  */
+
+
+
+/* Start Landing  */
+
+.landing {
+  background-color: var(--section-color);
+  width: 100%;
+  direction: rtl;
+}
+
+.landing svg {
+  color: black;
+  width: 50px;
+  font-size: 20px;
+  animation: move .9s ease-in-out infinite;
+  position: absolute;
+}
+
+@keyframes move {
+  0%{margin-top: 0;}
+  50%{margin-top: 40px;}
+  100%{margin-top: 0;}
+}
+
+.pic-about {
+  margin-top: 50px;
+  width: 250px;
+}
+
+/* End Landing  */
+
+
+
+/* Start Home  */
+
+
+.home-section {
+  direction: rtl;
+}
+
+.this {
+  font-size: 50px;
+  color: var(--green-color);
+}
+
+.main-title h4 {
+  color: var(--red-color);
+}
+
+.container .main-title::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: turquoise;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20%;
+}
+
+.home-section .container .card {
+  width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+}
+
+.home-section .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #ebf5fc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: .4s;
+}
+
+.home-section .container .card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+}
+
+.home-section .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #03a9f4;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.home-section .container .card .box .content a:hover {
+  background-color: #ff568f;
+}
+
+.home-section .container .card .box .content img {
+  bottom: 30px;
+  position: relative;
+}
+
+.home-section .container .card:hover .box h3,
+.home-section .container .card:hover .box h5,
+.home-section .container .card:hover .box h4,
+.home-section .container .card:hover .box h6,
+.home-section .container .card:hover .box p {
+  color: white;
+}
+
+/* End Home  */
+
+
+/* Start Footer */
+
+.footer {
+  background-color: var(--dark-color);
+  direction: rtl;
+}
+
+.footer .info img {
+  width: 80px;
+}
+
+.footer .info .copyright a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--green-color); 
+  position: relative;
+}
+
+.footer .info .copyright a::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: var(--green-color);
+  top: 37px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .3s;
+}
+
+.footer .info .copyright a:hover::after {
+  width: 87px;
+}
+
+.footer .contact a {
+  width: 230px;
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+}
+
+.final-list {
+  padding: 0;
+}
+
+.footer .links ul li a{
+  text-decoration: none;
+  color: rgba(255,255,255,.5);
+}
+
+.footer .links ul a:hover {
+  color: white;
+}
+
+.butt {
+  background-color: var(--green-color);
+  outline: none;
+  border: 0;
+}
+
+.butt:hover {
+  background-color: #ff568f;
+}
+
+/* End Footer */
+
+
+
+/* Start Benefits */
+
+.benefits {
+  background-color: var(--section-color);
+  direction: rtl;
+  height: calc(100vh - 62.66px);
+}
+
+.benefits .box svg {
+  color: var(--yellow-color);
+  font-size: 50px;
+}
+
+.benefits .box h5 {
+  background-color: var(--green-color);
+}
+
+.team .container .btn {
+  width: 300px;
+  font-size: 27px;
+  color: white;
+  font-weight: 500;
+}
+
+
+/* End Benefits */
+
+
+/* Start Snap  */
+
+.snap-back {
+  background-color: #0088cc;
+}
+
+.snap .box {
+  transition: .3s;
+}
+
+.snap .box:hover {
+  transform: translatey(-30px);
+  border-bottom: 5px solid var(--red-color);
+}
+
+.goals {
+  background-color: var(--section-color);
+  height: calc(100vh - 62.66px);
+}
+
+
+/* End Snap  */
+
+
+/* Start direct */
+
+.directive {
+  direction: rtl;
+  height: calc(100vh + 250px);
+  position: relative;
+}
+
+.directive .container .card {
+  width: 500px;
+  min-height: 350px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+}
+
+.directive .container .card .box {
+
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #ebf5fc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  transition: .4s;
+}
+
+.directive .container .card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .2);
+  background: linear-gradient(45deg,#b95ce4,#4f29cd);
+}
+
+.home-section .container .card:hover .box h3,
+.home-section .container .card:hover .box .content p {
+  color: white;
+}
+
+.directive .content p {
+  line-height: 2;
+}
+
+/* End direct */
+
+/* Start terms  */
+
+.terms .container .card {
+  width: 320px;
+  height: 500px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+}
+
+.home-section .container .card .content p {
+  line-height: 1.8;
+}
+
+/* End terms  */
+
+/* Start Team */
+
+.team .container .card {
+  width: 350px;
+  height: 530px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+              inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+              5px 5px 5px rgba(0, 0, 0, 0.05),
+              -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+}
+
+/* End Team */
